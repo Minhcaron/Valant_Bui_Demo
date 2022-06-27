@@ -30,6 +30,9 @@ This project was generated using [Nx](https://nx.dev).
 	4) E is always on the bottor right corner
 
 - Cover those assumptions and make sure maze size uploaded is correct, only those 4 letters are used, etc...
+- Create a new component for displaying a maze.
+- Create a way to come back to the main menu and select another maze.
+- Set a maze as "done" on the original menu.
 
 ## Some issues
 - I had trouble sending custom objects to the API.
