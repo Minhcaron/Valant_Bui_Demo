@@ -10,7 +10,8 @@ This project was generated using [Nx](https://nx.dev).
 
 
 ## How to test the maze game
-
+Replace the original "apps" folder with the one from this repository.
+Replace the original "ValantDemoApi" folder with the one from this repository.
 Run `npm run generate-client:server-app` then `npm run start`.
 Test the game at http://localhost:4200/
 
