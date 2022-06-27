@@ -34,3 +34,5 @@ This project was generated using [Nx](https://nx.dev).
 ## Some issues
 - I had trouble sending custom objects to the API.
 - For example : I tried creating a PlayerPosition class and send it to the API but couldn't so I sent an 2-dimensional integer array instead.
+- I had some other issues with .Net framework version
+- Issues debuging in Visual Studio
