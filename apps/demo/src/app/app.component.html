@@ -1,0 +1,50 @@
+<header class="flex">
+  <img alt="Valant logo" width="150" src="../assets/valant_logo.png" />
+  <h1>Welcome to {{ title }}</h1>
+</header>
+<main>  
+  <!-- Maze navigator -->
+	<div *ngIf="playMode==false">
+		<div class="button_container">
+			<input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+			<button (click)="fileInput.click()">Upload a maze</button>
+		</div>
+		
+		<div class="mazeRow" *ngFor="let mazeItem of mazeList; let mazeIndex=index;" >
+			<table>
+				<tr *ngFor="let row of mazeItem">
+					<td *ngFor="let character of row.split('')">
+						{{character}}
+					</td>
+				</tr>
+			</table>
+			
+			<button (click)="playSelectedMaze(mazeIndex)">Play this maze</button>
+		</div>
+	</div>
+	
+	<!-- Maze Game -->
+	<div class="mazeRow" *ngIf="playMode==true">
+		<p *ngIf="checkIfWon()">You won !</p>
+		<table>
+			<tr *ngFor="let row of selectedMaze; let rowNumber=index;">
+				<td *ngFor="let character of row.split(''); let columnNumber=index;">
+					<div *ngIf="rowNumber==playerPosition.x && columnNumber==playerPosition.y;then content else other_content"></div>
+					<ng-template #content>*</ng-template>
+					<ng-template #other_content>{{character}}</ng-template>
+				</td>
+			</tr>
+		</table>
+		
+		<p class="left_text">position x: {{playerPosition.x}}</p>
+		<p class="left_text">position y: {{playerPosition.y}}</p>
+		
+		<div class="nav_button up" (click)="goUp()">&#8593;</div>
+		<div class="nav_button left" (click)="goLeft()">&#8592;</div>
+		<div class="nav_button right" (click)="goRight()">&#8594;</div>
+		<div class="nav_button down" (click)="goDown()">&#8595;</div>
+	</div>
+	
+	
+	
+</main>
