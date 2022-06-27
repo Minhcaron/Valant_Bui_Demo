@@ -29,6 +29,8 @@ This project was generated using [Nx](https://nx.dev).
 	3) S is always on the top left corner
 	4) E is always on the bottor right corner
 
+- Cover those assumptions and make sure maze size is correct, only those 4 letters are used, etc...
+
 ## Some issues
 - I had trouble sending custom objects to the API.
 - For example : I tried creating a PlayerPosition class and send it to the API but couldn't so I sent an 2-dimensional integer array instead.
