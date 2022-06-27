@@ -10,10 +10,12 @@ This project was generated using [Nx](https://nx.dev).
 
 
 ## How to test the maze game
-Replace the original "apps" folder with the one from this repository.
-Replace the original "ValantDemoApi" folder with the one from this repository.
-Run `npm run generate-client:server-app` then `npm run start`.
-Test the game at http://localhost:4200/
+- Replace the original "apps" folder with the one from this repository.
+- Replace the original "ValantDemoApi" folder with the one from this repository.
+- Run `npm run generate-client:server-app` then `npm run start`.
+- Test the game at http://localhost:4200/
+- You can find 3 maze files to upload under apps/demo/src/app (maze1.txt, maze2.txt, maze3.txt)
+- After selecting a maze to play, click on the directional arrows to move around.
 
 ## Some ideas for improvement 
 - Create an introduction menu
